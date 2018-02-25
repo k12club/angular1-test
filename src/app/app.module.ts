@@ -17,11 +17,15 @@ import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-rout';
 import { UserService } from './service/user.service';
+import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { NavComponent } from './page/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    DashboardComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -29,13 +33,14 @@ import { UserService } from './service/user.service';
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyCqT_rsLQXbnRleMS2m6dMdvbHGsn_ctBY",
-      authDomain: "project-169022.firebaseapp.com",
-      databaseURL: "https://project-169022.firebaseio.com",
-      projectId: "project-169022",
-      storageBucket: "project-169022.appspot.com",
-      messagingSenderId: "1089384386922"
+    authDomain: "project-169022.firebaseapp.com",
+    databaseURL: "https://project-169022.firebaseio.com",
+    projectId: "project-169022",
+    storageBucket: "project-169022.appspot.com",
+    messagingSenderId: "1089384386922"
     }),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

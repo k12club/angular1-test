@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../model/User';
 import { UserService } from '../../service/user.service';
 import { error } from 'util';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { resource } from 'selenium-webdriver/http';
+
 
 @Component({
   selector: 'app-user',
@@ -10,16 +13,17 @@ import { error } from 'util';
 })
 export class UserComponent implements OnInit {
 
-  user:User = {firstname:'',lastname:''};
+  user:User = {email:'k12club@hotmail.com',password:'123456'};
   users:User[];
   key:string;
 
   constructor(
-    private userService:UserService
+    private userService:UserService,
+    private angularFireAuth:AngularFireAuth,
   ) { }
 
   ngOnInit() {
-    this.getListUser();
+    // this.getListUser();
   }
 
   save(user:User){
@@ -49,7 +53,7 @@ export class UserComponent implements OnInit {
       
       console.log(res);
       this.key='';
-      this.user = {firstname:'',lastname:''};
+      this.user = {email:'',password:''};
    
     });
 }
@@ -59,4 +63,33 @@ export class UserComponent implements OnInit {
       console.log(res);
     })
   }
+  login(user:User){
+    this.angularFireAuth.auth.signInWithEmailAndPassword(user.email,user.password).then(res=>{
+      console.log(res);
+      
+    }).catch(error=>{
+      console.log("error"+error);
+      
+    })
+    // console.log(user);
+  }
+  signup(user:User){
+    this.angularFireAuth.auth.createUserWithEmailAndPassword(user.email,user.password).then(res=>{
+      console.log(res);
+      
+    }).catch(error=>{
+      console.log("error"+error);
+      
+    })
+  }
+  reset(user:User){
+    this.angularFireAuth.auth.sendPasswordResetEmail(user.email).then(res=>{
+      console.log(res);
+      
+    }).catch(error=>{
+      console.log("error"+error);
+      
+    })
+  }
 }
+
