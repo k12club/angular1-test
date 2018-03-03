@@ -3,9 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './page/user/user.component';
-import { FormsModule } from '@angular/forms';
 
+<<<<<<< HEAD
 import { AngularFireModule } from 'angularfire2';
 // for AngularFireDatabase
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -35,22 +34,17 @@ import { SignupComponent } from './page/signup/signup.component';
 =======
     UserComponent
 >>>>>>> parent of 561debe... login,logout
+=======
+
+@NgModule({
+  declarations: [
+    AppComponent
+>>>>>>> parent of 7104bb2... 1
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp({
-      apiKey: "AIzaSyCqT_rsLQXbnRleMS2m6dMdvbHGsn_ctBY",
-      authDomain: "project-169022.firebaseapp.com",
-      databaseURL: "https://project-169022.firebaseio.com",
-      projectId: "project-169022",
-      storageBucket: "project-169022.appspot.com",
-      messagingSenderId: "1089384386922"
-    }),
-    AngularFireDatabaseModule,
+    BrowserModule
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
