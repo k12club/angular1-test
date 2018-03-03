@@ -1,4 +1,4 @@
-<!-- <ul *ngFor="let useres of users" (click)="modify(useres)">
+<ul *ngFor="let useres of users" (click)="modify(useres)">
   <li>{{useres.firstname}}</li>
   <li>{{useres.lastname}}</li>
   <button (click)="remove(useres.$key)">Remove</button>
@@ -12,31 +12,4 @@ Last name: {{user.lastname}}<br>
 <input type="text" [(ngModel)]= "user.lastname">
 
 <button (click)="save(user)">Save</button>
-<button (click)="update(user)" *ngIf="key">update</button> -->
-
-<!-- <div class="alert alert-primary" role="alert">
-  This is a primary alert—check it out!
-</div> -->
-<div class="row" id=login>
-  <div class="col-5"></div>
-  <div class="col-2">
-    <!-- <form class="form-signin"> -->
-      <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" height="72" width="72">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" type="email" [(ngModel)]= "user.email">
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input id="inputPassword" class="form-control" placeholder="Password" required="" type="password" [(ngModel)]= "user.password">
-      <div class="checkbox mb-3">
-        <label>
-          <input value="remember-me" type="checkbox"> Remember me
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login(user)" >Sign in</button>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="signup(user)" >Sign up</button>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="reset(user)" >reset</button>
-      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
-    <!-- </form> -->
-  </div>
-  <div class="col-5"></div>
-</div>
+<button (click)="update(user)" *ngIf="key">update</button>

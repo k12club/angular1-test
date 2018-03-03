@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../model/User';
 import { UserService } from '../../service/user.service';
 import { error } from 'util';
-import { AngularFireAuth } from 'angularfire2/auth';
-import { resource } from 'selenium-webdriver/http';
-
 
 @Component({
   selector: 'app-user',
@@ -13,18 +10,21 @@ import { resource } from 'selenium-webdriver/http';
 })
 export class UserComponent implements OnInit {
 
+<<<<<<< HEAD
   router: any;
   user:User = {email:'k12club@hotmail.com',password:'123456'};
+=======
+  user:User = {firstname:'',lastname:''};
+>>>>>>> parent of 561debe... login,logout
   users:User[];
   key:string;
 
   constructor(
-    private userService:UserService,
-    private angularFireAuth:AngularFireAuth,
+    private userService:UserService
   ) { }
 
   ngOnInit() {
-    // this.getListUser();
+    this.getListUser();
   }
 
   save(user:User){
@@ -54,7 +54,7 @@ export class UserComponent implements OnInit {
       
       console.log(res);
       this.key='';
-      this.user = {email:'',password:''};
+      this.user = {firstname:'',lastname:''};
    
     });
 }
@@ -64,6 +64,7 @@ export class UserComponent implements OnInit {
       console.log(res);
     })
   }
+<<<<<<< HEAD
   login(user:User){
     this.angularFireAuth.auth.signInWithEmailAndPassword(user.email,user.password).then(res=>{
       console.log(res);
@@ -97,5 +98,6 @@ export class UserComponent implements OnInit {
     this.router.navigate(['/signup'])
     
   }
+=======
+>>>>>>> parent of 561debe... login,logout
 }
-
