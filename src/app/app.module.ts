@@ -19,13 +19,15 @@ import { routes } from './app-rout';
 import { UserService } from './service/user.service';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { NavComponent } from './page/nav/nav.component';
+import { SignupComponent } from './page/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     DashboardComponent,
-    NavComponent
+    NavComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

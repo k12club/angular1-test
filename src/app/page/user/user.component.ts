@@ -13,6 +13,7 @@ import { resource } from 'selenium-webdriver/http';
 })
 export class UserComponent implements OnInit {
 
+  router: any;
   user:User = {email:'k12club@hotmail.com',password:'123456'};
   users:User[];
   key:string;
@@ -73,15 +74,15 @@ export class UserComponent implements OnInit {
     })
     // console.log(user);
   }
-  signup(user:User){
-    this.angularFireAuth.auth.createUserWithEmailAndPassword(user.email,user.password).then(res=>{
-      console.log(res);
+  // signup(user:User){
+  //   this.angularFireAuth.auth.createUserWithEmailAndPassword(user.email,user.password).then(res=>{
+  //     console.log(res);
       
-    }).catch(error=>{
-      console.log("error"+error);
+  //   }).catch(error=>{
+  //     console.log("error"+error);
       
-    })
-  }
+  //   })
+  // }
   reset(user:User){
     this.angularFireAuth.auth.sendPasswordResetEmail(user.email).then(res=>{
       console.log(res);
@@ -90,6 +91,11 @@ export class UserComponent implements OnInit {
       console.log("error"+error);
       
     })
+  }
+  signup(){
+    this.angularFireAuth.auth.signOut();
+    this.router.navigate(['/signup'])
+    
   }
 }
 
