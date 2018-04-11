@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title = 'app';
 =======
+=======
+>>>>>>> parent of 561debe... login,logout
   
 >>>>>>> parent of 561debe... login,logout
 }

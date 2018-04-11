@@ -18,9 +18,12 @@ import { routes } from './app-rout';
 import { UserService } from './service/user.service';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { NavComponent } from './page/nav/nav.component';
 import { SignupComponent } from './page/signup/signup.component';
+=======
+>>>>>>> parent of 561debe... login,logout
 =======
 >>>>>>> parent of 561debe... login,logout
 =======
@@ -29,6 +32,7 @@ import { SignupComponent } from './page/signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     UserComponent,
@@ -48,6 +52,8 @@ import { SignupComponent } from './page/signup/signup.component';
   imports: [
     BrowserModule
 =======
+=======
+>>>>>>> parent of 561debe... login,logout
     UserComponent
   ],
   imports: [
@@ -63,6 +69,9 @@ import { SignupComponent } from './page/signup/signup.component';
       messagingSenderId: "1089384386922"
     }),
     AngularFireDatabaseModule,
+<<<<<<< HEAD
+>>>>>>> parent of 561debe... login,logout
+=======
 >>>>>>> parent of 561debe... login,logout
   ],
   providers: [],
