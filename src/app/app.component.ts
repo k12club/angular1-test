@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+<<<<<<< HEAD
   title = 'app';
+=======
+  
+>>>>>>> parent of 561debe... login,logout
 }

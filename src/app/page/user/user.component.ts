@@ -11,8 +11,12 @@ import { error } from 'util';
 export class UserComponent implements OnInit {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   router: any;
   user:User = {email:'k12club@hotmail.com',password:'123456'};
+=======
+  user:User = {firstname:'',lastname:''};
+>>>>>>> parent of 561debe... login,logout
 =======
   user:User = {firstname:'',lastname:''};
 >>>>>>> parent of 561debe... login,logout
@@ -65,6 +69,7 @@ export class UserComponent implements OnInit {
     })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   login(user:User){
     this.angularFireAuth.auth.signInWithEmailAndPassword(user.email,user.password).then(res=>{
       console.log(res);
@@ -98,6 +103,8 @@ export class UserComponent implements OnInit {
     this.router.navigate(['/signup'])
     
   }
+=======
+>>>>>>> parent of 561debe... login,logout
 =======
 >>>>>>> parent of 561debe... login,logout
 }
